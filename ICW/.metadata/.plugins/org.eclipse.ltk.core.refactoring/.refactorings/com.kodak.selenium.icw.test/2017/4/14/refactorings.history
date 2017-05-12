@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;com.kodak.selenium.test.NewTest&apos; to &apos;ObjectRepositoryTest&apos;&#x0D;&#x0A;- Original project: &apos;com.kodak.selenium.icw.test&apos;&#x0D;&#x0A;- Original element: &apos;com.kodak.selenium.test.NewTest&apos;&#x0D;&#x0A;- Renamed element: &apos;com.kodak.selenium.test.ObjectRepositoryTest&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;NewTest&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.kodak.selenium.test{NewTest.java[NewTest" matchStrategy="1" name="ObjectRepositoryTest" qualified="false" references="true" similarDeclarations="false" stamp="1491555709114" textual="false" version="1.0"/>
-</session>
