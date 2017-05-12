@@ -23,7 +23,6 @@ INDEX VERSION 1.129+D:\workspace_git\ICW\.metadata\.plugins\org.eclipse.jdt.core
 2453780356.index
 843494433.index
 1525087677.index
-722609791.index
 1475717011.index
 1625764473.index
 2712744588.index
