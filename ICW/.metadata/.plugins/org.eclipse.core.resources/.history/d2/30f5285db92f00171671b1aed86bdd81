@@ -1,0 +1,15 @@
+package com.kodak.study.Study;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	DocxUtil dUtil = new DocxUtil();
+    	dUtil.read("D:\\docs\\refer.docx");
+        System.out.println( "Hello World!" );
+    }
+}

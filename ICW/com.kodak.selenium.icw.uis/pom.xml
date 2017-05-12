@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.kodak.selenium</groupId>
+	<artifactId>com.kodak.selenium.icw.uis</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.kodak.selenium</groupId>
+			<artifactId>com.kodak.selenium</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.markusbernhardt/robotframework-selenium2library-java -->
+		<dependency>
+			<groupId>com.github.markusbernhardt</groupId>
+			<artifactId>robotframework-selenium2library-java</artifactId>
+			<version>1.4.0.8</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun</groupId>
+			<artifactId>tools</artifactId>
+			<scope>system</scope>
+			<version>1.8.0.121</version>
+			<systemPath>${JAVA_HOME}\lib\tools.jar</systemPath>
+		</dependency>
+	</dependencies>
+</project>

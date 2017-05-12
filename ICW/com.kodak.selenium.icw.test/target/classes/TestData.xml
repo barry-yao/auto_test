@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestData>
+	<ICWServers>
+		<Server name="icw9" url="http://icw2k12qa2" />
+	</ICWServers>
+</TestData>

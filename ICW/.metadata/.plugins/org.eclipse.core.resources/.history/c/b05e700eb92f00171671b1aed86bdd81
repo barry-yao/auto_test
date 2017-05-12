@@ -1,0 +1,9 @@
+package com.kodak.study.Study;
+
+public class DocxUtil {
+
+	public DocxUtil() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

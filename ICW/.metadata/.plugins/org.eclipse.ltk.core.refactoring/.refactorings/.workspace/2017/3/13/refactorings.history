@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;com.kodak.selenium.icw.pages&apos; to &apos;com.kodak.selenium.icw.uis&apos;" description="Rename resource &apos;com.kodak.selenium.icw.pages&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/com.kodak.selenium.icw.pages" name="com.kodak.selenium.icw.uis" stamp="1490775974864" updateReferences="true"/>
+</session>

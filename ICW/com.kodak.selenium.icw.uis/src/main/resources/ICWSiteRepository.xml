@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository Name="ICW">
+	<pages>
+		<loginPage type="Page">
+			<username type="TextBox" by="name=username" />
+			<password type="TextBox" by="name=password" />
+			<login type="Button" by="cssSelector=input[type='image']" />
+		</loginPage>
+		<folderViewPage type="Page">
+			<loading.FolderView type="Div" by="className=foldLoading" />
+		</folderViewPage>
+		<myTasksPage type="Page">
+			<loading.MyTasks type="Div" by="className=mtskLoading" />
+			<myTask.row type="TableRow" by="xpath=//tr[td='%s']" />
+			<myTask.tasks type="TableRow"
+				by="cssSelector=#LSTV_Scroll tbody tr[ondblclick]" />
+			<myTask.thumbnail type="Anchor"
+				by="xpath=//tr[td='%s']/td[1]//img[@class='lstvListCellThumbnail']" />
+			<myTask.link type="Anchor" by="linkText=%s" />
+		</myTasksPage>
+		<Review>
+			<review.progressbar type="Div"
+				by="cssSelector=div[role='progressbar']" />
+			<leftRegion type="Div" by="id=leftRegion">
+				<buttonSetFileListStyle type="SmartReview.FileListStyleDropdownList">
+					<fileListStyleMenuItem type="Div" by="className=%s" />
+				</buttonSetFileListStyle>
+				<taskName type="ICWDropdown" />
+				<currentFileItem type="*" by="className=imageHeaderTitle" />
+				<fileItems type="*"
+					by="cssSelector=#itemListCollection .pageName span" />
+				<fileItemWithName type="SRFileItem"
+					by="xpath=//div[@class='pageName'][span='%s']/..">
+					<statusIcon type="Span" by="cssSelector=span.preflightIcon+span" />
+					<fileItemName by="cssSelector=.pageName span" />
+					<isMultiPage by="className=multiPageIcon" />
+				</fileItemWithName>
+				<fileItemSelected type="SRFileItem"
+					by="cssSelector=.fileItem.item-highlight">
+				</fileItemSelected>
+			</leftRegion>
+			<pageSelection type="dialog"
+				by="cssSelector=div.ui-dialog[aria-labelledby='ui-id-2']">
+				<Next type="Button"
+					by="id=cssSelector=div.ui-dialog[aria-labelledby='ui-id-2'] .ui-dialog-buttonset button:nth-last-child(3)" />
+				<Current type="Button"
+					by="cssSelector=div.ui-dialog[aria-labelledby='ui-id-2'] .ui-dialog-buttonset button:nth-last-child(2)" />
+				<Close type="Button"
+					by="cssSelector=div.ui-dialog[aria-labelledby='ui-id-2'] .ui-dialog-buttonset button:last-child" />
+			</pageSelection>
+			<viewImageBottom by="id=viewImageBottom">
+				<approve type="Button" by="id=buttonApprove0" />
+				<reject type="Reject" by="id=buttonReject0" />
+				<reviewUserComment type="TextBox" by="id=reviewUserComment" />
+				<reviewApply type="Button" by="id=buttonReviewApply" />
+				<reviewCancel type="Button" by="id=buttonReviewCancel" />
+			</viewImageBottom>
+			<centerRegion>
+				<navigationBarRegion>
+				</navigationBarRegion>
+				<mainRegion>
+					<viewImageHeader>
+						<imageHeaderDropdownTrigger type="ICWDropdownList"
+							by="className=imageHeaderDropdownTrigger">
+							<menuItemRevision
+								by="cssSelector=#menuImageHeader0 li:nth-last-child(%s)" />
+							<menuItemLatestVersion
+								by="cssSelector=#menuImageHeader0 li:first-child" />
+						</imageHeaderDropdownTrigger>
+						<leftTitle
+							by="
+								cssSelector=#imageHeader0 . imageHeaderTitle ">
+						</leftTitle>
+						<middleTitle by="cssSelector=#imageHeader0 .imageHeaderTitle"></middleTitle>
+					</viewImageHeader>
+					<viewImage></viewImage>
+					<viewImageBottom>
+					</viewImageBottom>
+				</mainRegion>
+
+
+				<mainRegion>
+					<viewImage>
+						<viewKinetic0 type="Canvas">
+							<viewKinetic0_c type="Canvas"
+								by="cssSelector=#viewKinetic0 .kineticjs-content">
+
+								<mainCanvas type="Canvas"
+									by="cssSelector=#viewKinetic0 canvas:last-child" />
+
+							</viewKinetic0_c>
+						</viewKinetic0>
+					</viewImage>
+					<pageEditAnnotationBox>
+						<userComment type="TextBox" />
+						<annotationControlCreate />
+						<annotationControlCancel />
+					</pageEditAnnotationBox>
+				</mainRegion>
+			</centerRegion>
+			<rightRegion type="Div">
+				<navigationBarRightRegion>
+					<annotationToolsRegion>
+						<buttonToolSelect />
+						<buttonAnnotationText />
+						<buttonAnnotationOval />
+						<buttonAnnotationRectangle />
+						<buttonAnnotationLine />
+						<buttonAnnotationPen />
+						<buttonAnnotationMultiShape />
+						<buttonAnnotationRuler />
+						<buttonAnnotationSquareRuler />
+						<buttonAnnotationGuideH />
+						<buttonAnnotationGuideV />
+						<buttonAnnotationDensities />
+					</annotationToolsRegion>
+				</navigationBarRightRegion>
+			</rightRegion>
+			<navigationBarRightRegion>
+				<buttonUserPreference />
+			</navigationBarRightRegion>
+			<srPreference by="id=dialogViewPreference">
+				<preApproveReview type="SpanValueDropdown"
+					dataContentCss="#preAppDust" itemLabel="span">
+				</preApproveReview>
+
+				<preAllowAnnotation type="Checkbox" />
+				<preDefault />
+				<preCancel />
+				<preDone />
+			</srPreference>
+		</Review>
+	</pages>
+	<Container>
+		<naclToolbarStrip>
+			<pageBar>
+				<pageBarMyTasks type="Img"
+					by="id=ctl00_uconNavBar_ctl00_imgIcon" />
+				<pageBarManageTask type="Img"
+					by="id=ctl00_uconNavBar_ctl01_imgIcon" />
+				<pageBarProjectsLibraries type="Img"
+					by="id=ctl00_uconNavBar_ctl02_imgIcon" />
+				<pageBarManageAccess type="Img"
+					by="id=ctl00_uconNavBar_ctl03_imgIcon" />
+			</pageBar>
+
+			<userBar></userBar>
+		</naclToolbarStrip>
+	</Container>
+</repository>

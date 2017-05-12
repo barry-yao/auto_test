@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="38482" started-at="2017-04-11T09:28:56Z" finished-at="2017-04-11T09:29:34Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="38482" started-at="2017-04-11T09:28:56Z" finished-at="2017-04-11T09:29:34Z">
+      <class name="com.kodak.selenium.icw.test.ReviewTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.kodak.selenium.icw.test.ReviewTest@199d22e]" name="beforeClass" is-config="true" duration-ms="19696" started-at="2017-04-11T17:28:56Z" finished-at="2017-04-11T17:29:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.kodak.selenium.icw.test.ReviewTest@199d22e]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2017-04-11T17:29:15Z" finished-at="2017-04-11T17:29:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testPreference()[pri:0, instance:com.kodak.selenium.icw.test.ReviewTest@199d22e]" name="testPreference" duration-ms="16328" started-at="2017-04-11T17:29:15Z" finished-at="2017-04-11T17:29:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPreference -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.kodak.selenium.icw.test.ReviewTest@199d22e]" name="afterMethod" is-config="true" duration-ms="224" started-at="2017-04-11T17:29:32Z" finished-at="2017-04-11T17:29:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.kodak.selenium.icw.test.ReviewTest@199d22e]" name="afterClass" is-config="true" duration-ms="2213" started-at="2017-04-11T17:29:32Z" finished-at="2017-04-11T17:29:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.kodak.selenium.icw.test.ReviewTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,68 @@
+package com.kodak.selenium.icw.pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import com.kodak.selenium.ControlCollection;
+import com.kodak.selenium.ui.NewPage;
+import com.kodak.selenium.ui.SimpleMethod;
+
+public class SmartReview extends NewPage {
+
+	public SmartReview(WebDriver wd, SimpleMethod trigger) throws Exception {
+		super(wd, trigger);
+
+	}
+
+	@Override
+	protected void waitLoading() {
+		this.waitElementAppear("review.spinner");
+		this.waitElementDisappear("review.spinner");
+		this.taksScreenshot();
+	}
+
+	public void approve(String name, String comment) throws Exception {
+		this.selectFileItem(name);
+		this.click("approve");
+		this.input("reviewUserComment", comment);
+
+		this.click("reviewApply");
+		this.click("Current");
+	}
+
+	public void reject(String name, String comment) throws Exception {
+		this.selectFileItem(name);
+		this.click("reject");
+		this.input("reviewUserComment", comment);
+		this.click("reviewApply");
+		this.click("Current");
+	}
+
+	public List<String> getCurrentFiles() throws Exception {
+		ControlCollection cc = new ControlCollection("currentFileItem", this._webDriver);
+		return cc.getTexts();
+	}
+
+	public List<String> getFiles() throws Exception {
+		ControlCollection cc = new ControlCollection("fileItem", this._webDriver);
+		return cc.getTexts();
+	}
+
+	public void selectFileItem(String name) throws Exception {
+
+		if (this.getCurrentDisplayedFile().equals(name))
+			return;
+
+		this.getHtmlControl("fileItemByName", name).click();
+
+		this.waitLoading();
+
+	}
+
+	public String getCurrentDisplayedFile() throws Exception {
+		return this.getText("currentFileItem");
+	}
+
+}

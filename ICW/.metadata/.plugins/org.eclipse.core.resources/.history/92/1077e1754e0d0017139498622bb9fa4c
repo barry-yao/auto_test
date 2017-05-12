@@ -1,0 +1,74 @@
+package com.kodak.selenium;
+
+import org.dom4j.Element;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+public class HtmlControl {
+
+	protected WebElement _webElement;
+	protected Actions _actions;
+	protected WebDriver _webDriver;
+
+	public WebElement getWebElement() {
+		return _webElement;
+	}
+
+	protected HtmlControl(String id, WebDriver wd) throws Exception {
+		
+		HtmlControlDefinition hcDef = new HtmlControlDefinition(getElement(id));
+		_webElement = wd.findElement(hcDef.toBy());
+		_webDriver = wd;
+		_actions = new Actions(wd);
+	}
+	
+	private Element getElement(String id){
+		String xpath = String.format("//%s", id);
+		if (this.getClass() != HtmlControl.class) {
+			xpath = String.format("//%s[@type='%s']", id, this.getClass().getSimpleName());
+		}
+		System.out.println(xpath);
+		return  (Element) ObjectRepository.getDocumentRoot().selectSingleNode(xpath);
+	}
+	
+
+	protected HtmlControl(String fmtId, WebDriver wd, String fmtValue) throws Exception {
+		HtmlControlDefinition hcDef = new HtmlControlDefinition(getElement(fmtId), fmtValue);
+		_webElement = wd.findElement(hcDef.toBy());
+		_webDriver = wd;
+		_actions = new Actions(wd);
+	}
+
+	protected HtmlControl(WebElement we, WebDriver wd) {
+		this._webElement = we;
+		_webDriver = wd;
+		_actions = new Actions(wd);
+	}
+
+	public void click() {
+		this._webElement.click();
+	}
+
+	public String getCssClass() {
+		return this._webElement.getAttribute("class");
+	}
+
+	public String getAttr(String name) {
+		return this._webElement.getAttribute(name);
+	}
+
+	public void doubleClick() {	
+		_actions.moveToElement(this._webElement, 5, 5).doubleClick().perform();
+		_actions.doubleClick(this._webElement).perform();
+	}
+	
+	public Object executeJS(String attrName){
+		
+		String js = this._webElement.getAttribute(attrName);
+		return ((JavascriptExecutor)this._webDriver).executeScript(js);
+			
+	}
+
+}

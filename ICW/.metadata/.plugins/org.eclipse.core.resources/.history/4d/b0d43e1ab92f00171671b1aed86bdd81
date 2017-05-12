@@ -1,0 +1,14 @@
+package com.kodak.study.Study;
+
+import org.apache.poi.POITextExtractor; 
+import org.apache.poi.xwpf.extractor.XWPFWordExtractor; 
+import org.apache.poi.xwpf.usermodel.XWPFComment; 
+import org.apache.poi.xwpf.usermodel.XWPFDocument; 
+
+public class DocxUtil {
+
+	public DocxUtil() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
